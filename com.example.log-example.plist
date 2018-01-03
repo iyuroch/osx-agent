@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.example.log-example</string>
+  <key>StartCalendarInterval</key>
+  <key>Program</key>
+  <string>/var/lib/log-example.sh</string>
+  <key>EnvironmentVariables</key> 
+  <dict>
+    <key>PATH</key>
+    <string>/bin:/usr/bin:/usr/local/bin</string> 
+  </dict>
+  <key>StandardOutPath</key>
+  <string>/var/log/example-log.log</string>
+  <key>StandardErrorPath</key>
+  <string>/tmp/test.stderr</string>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>StartInterval</key>
+  <integer>60</integer>
+</dict>
+</plist>
