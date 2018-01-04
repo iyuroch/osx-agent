@@ -9,7 +9,7 @@
   <string>/var/lib/log-example.sh</string>
 
   <key>StandardOutPath</key>
-  <string>/var/log/example-log.log</string>
+  <string>/tmp/example-log.log</string>
 
   <key>RunAtLoad</key>
   <true/>

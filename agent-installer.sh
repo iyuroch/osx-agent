@@ -4,8 +4,8 @@
 
 SCRIPTNAME="log-example.sh" #name of script in this folder to run as agent/daemon
 SCRIPTLOCATION="/var/lib/" #folder where script will persist
-PLISTTNAME="com.example.log-example.plist" #name of plist file
-PLISTLOCATION="~/Library/LaunchAgents/" #location of plist file
+PLISTNAME="com.example.log-example.plist" #name of plist file
+PLISTLOCATION="$HOME/Library/LaunchAgents/" #location of plist file
 
 function install() {
 if [ ! -d "$PLISTLOCATION" ]; then
@@ -24,4 +24,8 @@ launchctl load -w $PLISTLOCATION$PLISTNAME
 function uninstall() {
 rm $PLISTLOCATION$PLISTNAME
 rm $SCRIPTLOCATION$SCRIPTNAME
+
+launchctl unload $PLISTLOCATION$PLISTNAME
 }
+
+"$@"
